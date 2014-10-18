@@ -6,7 +6,7 @@ var squareoneAPI = (function () {
 	function init() {
 
 		// CALL INIT FUNCTIONS
-		console.log("squareoneAPI loaded...")
+		console.log("squareoneAPI loaded...");
 		
 	}
 

@@ -1,7 +1,6 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-
       // SASS COMPILER
       sass: {
         dist: {
@@ -17,20 +16,35 @@ module.exports = function(grunt) {
       jshint: {
         beforeconcat: ['assets/js/main.js']
       },
-      // CONCAT JS
+      // CONCAT MAIN JS
       concat: {
-        dist: {
-          src: [
-            'assets/js/vendor/*.js', // All JS in the vendor folder
-            'assets/js/plugins/*.js', // All JS in the plugins folder
-            'assets/js/main.js'  // This specific file
-          ],
+        options: {
+          separator: ';',
+        },
+        vendor: {
+          src: ['assets/js/vendor/*.js'], // All JS in the vendor folder
+          dest: 'assets/js/vendor.min.js',
+        },
+        plugins: {
+          src: ['assets/js/plugins/*.js'], // All JS in the plugins folder
+          dest: 'assets/js/plugins.min.js',
+        },
+        main: {
+          src: ['assets/js/main.js'], // This specific file
           dest: 'assets/js/main.min.js',
         }
       },
-      // UGLIFY JS
+      // UGLIFY VENDOR JS
       uglify: {
-        build: {
+        vendor: {
+          src: 'assets/js/vendor.min.js',
+          dest: 'assets/js/vendor.min.js'
+        },
+        plugins: {
+          src: 'assets/js/plugins.min.js',
+          dest: 'assets/js/plugins.min.js'
+        },
+        main: {
           src: 'assets/js/main.min.js',
           dest: 'assets/js/main.min.js'
         }
@@ -46,12 +60,11 @@ module.exports = function(grunt) {
           }]
         }
       },
-
       // WATCH TASKS & LIVE RELOADING
       watch: {
         scripts: {
           files: ['assets/js/*.js', 'assets/js/plugins/*.js', 'assets/js/vendor/*.js'],
-          tasks: ['jshint', 'concat', 'uglify'],
+          tasks: ['jshint', 'concat'],
           options: {
             spawn: false,
             livereload: true,
@@ -65,15 +78,14 @@ module.exports = function(grunt) {
             livereload: true,
           }
         },
-        html: {
-          files: ['*.html'],
+        markup: {
+          files: ['*.php', 'so-includes/*.php'],
           options: {
-            spawn: false,
-            livereload: true,
+              spawn: false,
+              livereload: true,
           }
         }
       }
-
   });
 
   // LOADING ALL TASKS
@@ -86,6 +98,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   grunt.registerTask('default', ['concat', 'uglify', 'sass', 'imagemin']);
-  grunt.registerTask('dev', ['watch']);
+  grunt.registerTask('dev', ['watch', 'jshint', 'concat']);
 
 }

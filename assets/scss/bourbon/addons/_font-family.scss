@@ -1,3 +1,55 @@
+@font-face {
+    font-family: 'Neutra Book';
+    src: url('../fonts/neutratext-book.eot');
+    src: url('../fonts/neutratext-book.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/neutratext-book.woff') format('woff'),
+         url('../fonts/neutratext-book.ttf') format('truetype'),
+         url('../fonts/neutratext-book.svg#neutra_textbook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutra Bold';
+    src: url('../fonts/neutratext-bold.eot');
+    src: url('../fonts/neutratext-bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/neutratext-bold.woff') format('woff'),
+         url('../fonts/neutratext-bold.ttf') format('truetype'),
+         url('../fonts/neutratext-bold.svg#neutra_textbold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Neutra Demi';
+    src: url('../fonts/neutratext-demi.eot');
+    src: url('../fonts/neutratext-demi.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/neutratext-demi.woff') format('woff'),
+         url('../fonts/neutratext-demi.ttf') format('truetype'),
+         url('../fonts/neutratext-demi.svg#neutra_textdemi') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('../fonts/gothambold1.eot');
+    src: local('Gotham Bold'), url('../fonts/gothambold1.woff') format('woff'), url('../fonts/gothambold1.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'GothamBook';
+    src: url('./GothamBook.eot');
+    src: local('GothamBook'), url('../fonts/GothamBook.woff') format('woff'), url('../fonts/GothamBook.ttf') format('truetype');
+}
+
+$gothamBook: 'Gotham Book', sans-serif;
+$gothamBold: 'Gotham Bold', sans-serif;
+
+$neutraBook: 'Neutra Book', sans-serif;
+$neutraBold: 'Neutra Bold', sans-serif;
+$neutraDemi: 'Neutra Demi', sans-serif;
+
 $georgia: Georgia, Cambria, "Times New Roman", Times, serif;
 $helvetica: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 $lucida-grande: "Lucida Grande", Tahoma, Verdana, Arial, sans-serif;

@@ -116,9 +116,6 @@ command `gulp taskname`.
 * __imagemin__ *(static)* -  
   Compresses source image files in the distribution folder.
   
-* __imagemin__ *(static)* -  
-  Compresses source image files in the distribution folder.
-  
 * __watch__ *(tests, static, scripts, style, images, browser-sync)* -  
   Calls sub-tasks to compile the project, then open up the project on a local server in your browser window.
    

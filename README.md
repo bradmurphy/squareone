@@ -89,7 +89,7 @@ command `gulp taskname`.
 * __static__ *(copy)* -  
   Calls sub-tasks to process files in the static folder.
   
-* __copy__ *(clean)*
+* __copy__ *(clean)* -  
   Copies files from the static folder to the distribution folder.
   
 * __scripts__ *(browserify, vendor)* -  

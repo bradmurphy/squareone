@@ -101,9 +101,6 @@ command `gulp taskname`.
 * __vendor__ *(clean)* -  
   Concatenates vendor scripts in the distribution folder.
   
-* __bower__ *(clean)* -  
-  Concatenates Bower scripts in the distribution folder.
-  
 * __styles__ *(stylus)* -  
   Calls sub-tasks for processing CSS source files.
   

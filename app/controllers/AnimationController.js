@@ -1,7 +1,9 @@
 
 'use strict';
 
+// import TweenMax and Waypoints
 var TweenMax = require('TweenMax');
+var Waypoint = require('Waypoint');
 
 // animation controller object constructor
 var AnimationController = function() {
@@ -10,7 +12,7 @@ var AnimationController = function() {
 
 };
 
-// initialize banner
+// initialize antimation
 AnimationController.prototype.init = function() {
 
 	console.log(':: animation init ::');

@@ -1,24 +1,28 @@
 'use strict';
 
-var Controller = require('../controllers/Controller');
-var page = new Controller();
-
+// import config and createjs
 var config = require('../config');
 var createjs = require('createjs');
+
+// import controllers
+var AnimationController = require('../controllers/AnimationController');
+var animation = new AnimationController();
 
 // bootstrap constructor
 var Bootstrap = function() {
 
     // variables
     this.count = 0;
+
+    // initialize the page and start preloading
     this.init();
 
 };
 
-// preload images
+// initialize and preload
 Bootstrap.prototype.init = function() {
 
-    // polite loading
+    // preload all images in the config manifest
     var preload = new createjs.LoadQueue(true);
     preload.on('fileload', this.filesLoaded.bind(this));
     preload.loadManifest(config.manifest);
@@ -44,8 +48,9 @@ Bootstrap.prototype.filesLoaded = function() {
 // once all items are loaded, start animation
 Bootstrap.prototype.allItemsLoaded = function() {
 
+    // start animation
     console.log(':: all items loaded ::');
-    page.start();
+    animation.start();
 
 };
 

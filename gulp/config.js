@@ -44,18 +44,8 @@ var config = {
 		dist: dest + '/images/'
 	},
 
-	tests: {
-		src: ['./tests/**/*.js'],
-		mocha: {
-			config: {
-				ui: 'tdd',
-				reporter:'spec'
-			}
-		}
-	},
-
 	lint: {
-		src: ['./app/**/*.js', '!app/vendor/**/*.js', './tests/**/*.js']
+		src: ['./app/**/*.js', '!app/vendor/**/*.js']
 	},
 
 	scripts: {

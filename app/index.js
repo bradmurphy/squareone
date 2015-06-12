@@ -1,10 +1,8 @@
 'use strict';
 
+// import bootstrap
 var Bootstrap = require('./core/Bootstrap');
 
-/**
- * create new ad object
- * @type {Ad|exports|module.exports}
- */
+// bootstrap the page
 var bootstrap = new Bootstrap(); 
 	

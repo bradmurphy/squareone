@@ -1,14 +1,12 @@
 'use strict';
 
-/**
- * preloading manifest
- * @type {{manifest: *[]}}
- */
+// configuration object
 var config = {
 
-  manifest: [
-    {src: './images/backup.jpg'}
-  ]
+	// preloading manifest	
+	manifest: [
+		{src: './images/backup.jpg'}
+	]
 
 };
 

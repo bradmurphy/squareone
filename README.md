@@ -45,10 +45,6 @@ flag is used.
   `src` lists directories and files to be processed;  
   `dist` is the destination folder
   
-* __tests__ -  
-  `src` lists directories and files to be processed;  
-  `mocha` is the Mocha test framework configuration
-  
 * __lint__ -  
   `src` lists directories and files to be processed
   
@@ -89,7 +85,7 @@ command `gulp taskname`.
 
   To use your own version number use `--version=STRING-OR-NUMBER-HERE`
   
-* __tests__ *(lint, codestyle, mocha)* -  
+* __tests__ *(lint, codestyle)* -  
   Runs unit tests and performs validation checks on JavaScript source files.
   
 * __lint__ -  
@@ -149,8 +145,6 @@ Describe the file and folder setup.
 
 * __/styles__ - Stylesheets go here. Use Stylus. https://learnboost.github.io/stylus/
 
-* __/tests__ - Unit tests go here. Use Mocha. http://mochajs.org/
-
 * __.bowerrc__ - Bower configuration. http://bower.io/docs/config/
 
 * __.editorconfig__ - IDE configuration. http://editorconfig.org/
@@ -166,3 +160,11 @@ Describe the file and folder setup.
 * __gulpfile.js__ - Gulp configuration. Loads scripts from `./gulp`
 
 * __package.json__ - NPM packages. https://docs.npmjs.com/files/package.json
+
+# Plugins/Libraries
+
+There are a few preinstalled plugins and libraries in the vendor folder, you can find the documentation for them here:
+
+* [GSAP](http://greensock.com/gsap/)
+* [Waypoints](http://imakewebthings.com/waypoints/)
+* [PreloadJS](http://www.createjs.com/downloads)

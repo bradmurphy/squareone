@@ -51,6 +51,7 @@
   "browserify-shim": {
     "ga": "global:ga",
     "TweenMax": "global:TweenMax",
+    "Waypoint": "global:Waypoint",
     "createjs": "global:createjs"
   },
   "browserify": {

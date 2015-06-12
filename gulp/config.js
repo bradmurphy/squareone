@@ -18,6 +18,12 @@ var config = {
 
 	production : production,
 
+	zip: {
+		dist: dest,
+		src: dest + '/**/*',
+		name: 'dist.zip'
+	},
+
 	clean: {
 		src: ['./.tmp', './dist']
 	},
@@ -38,23 +44,35 @@ var config = {
 		dist: dest + '/images/'
 	},
 
-	lint: {
-		src: ['./scripts/**/*.js', '!scripts/vendor/**/*.js']
+	tests: {
+		src: ['./tests/**/*.js'],
+		mocha: {
+			config: {
+				ui: 'tdd',
+				reporter:'spec'
+			}
+		}
 	},
 
-  scripts: {
-    watch: './scripts/**/*.js',
-    entry: './scripts/index.js',
-    output: 'main.build.js',
-    dist: dest + '/js/',
-    vendor: './scripts/vendor/**/*.js'
-  },
+	lint: {
+		src: ['./app/**/*.js', '!app/vendor/**/*.js', './tests/**/*.js']
+	},
+
+	scripts: {
+		watch: './app/**/*.js',
+		entry: './app/index.js',
+		output: 'main.build.js',
+		dist: dest + '/js/',
+		vendor: './app/vendor/**/*.js'
+	},
 
 	server: {
 		root: './.tmp',
 		port: 8080,
 		livereload: true
-	}
+	},
+
+	bower: './bower_components/'
 
 };
 

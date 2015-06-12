@@ -7,6 +7,12 @@ var gulp = require('gulp');
 var imagemin = require('gulp-imagemin');
 var changed = require('gulp-changed');
 
+function buildImagemin () {
+
+
+
+}
+
 gulp.task('imagemin', ['static'], function () {
 
 	return gulp.src(config.images.src)
@@ -19,5 +25,3 @@ gulp.task('imagemin', ['static'], function () {
 gulp.task('images', ['imagemin'], function() {
 
 });
-
-

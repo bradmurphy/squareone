@@ -17,6 +17,6 @@ gulp.task('watch', ['tests', 'static', 'scripts', 'styles', 'images', 'browser-s
 	gulp.watch(config.scripts.watch, ['reload-js']);
 
 	//notification
-	gutil.log(gutil.colors.bgGreen('Watching for changes...'));
+	gutil.log(gutil.colors.bgGreen('Watching for changes... butts'));
 
 });

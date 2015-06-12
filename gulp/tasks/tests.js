@@ -7,6 +7,7 @@ var gulp = require('gulp');
 var cache = require('gulp-cached');
 var jshint = require('gulp-jshint');
 var jscs = require('gulp-jscs');
+var mocha = require('gulp-mocha');
 
 gulp.task('lint', function () {
 
@@ -25,11 +26,18 @@ gulp.task('codestyle', function () {
 
 });
 
-gulp.task('tests', ['lint', 'codestyle'], function() {
+gulp.task('mocha', function () {
+
+	return gulp.src(config.tests.src)
+		.pipe(mocha(config.tests.mocha.config));
+
+});
+
+gulp.task('tests', ['lint', 'codestyle', 'mocha'], function() {
 
 	if (args.watch) {
-		gulp.watch(config.lint.src, ['lint']);
-		gulp.watch(config.tests.src, ['lint']);
+		gulp.watch(config.lint.src, ['lint', 'mocha']);
+		gulp.watch(config.tests.src, ['lint', 'mocha']);
 	}
 
 });

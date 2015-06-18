@@ -1,5 +1,8 @@
 'use strict';
 
+// import console colors
+var colors = require('../colors');
+
 // import config and createjs
 var config = require('../config');
 var createjs = require('createjs');
@@ -39,7 +42,7 @@ Bootstrap.prototype.filesLoaded = function() {
     // load every image before starting
     if (config.manifest.length === this.count) {
       // files are preloaded, page is ready
-      console.log(':: images loaded: ' + this.count + ' ::');
+      console.log('%c:: images loaded: %c' + this.count + ' %c::', colors.yellow, colors.blue, colors.yellow);
       this.allItemsLoaded();
     }
 
@@ -49,7 +52,7 @@ Bootstrap.prototype.filesLoaded = function() {
 Bootstrap.prototype.allItemsLoaded = function() {
 
     // start animation
-    console.log(':: all items loaded ::');
+    console.log('%c:: all items loaded ::', colors.orange);
     animation.start();
 
 };
